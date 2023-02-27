@@ -1,0 +1,278 @@
+{
+	"info": {
+		"_postman_id": "935891e9-6812-4fde-a85f-6810956184bc",
+		"name": "Madwin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6153599"
+	},
+	"item": [
+		{
+			"name": "core",
+			"item": [
+				{
+					"name": "init",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"session\", jsonData.session);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"game\": \"test_slot_game\",\n    \"player\": \"638ecb352de6bd4d2e8fe3ea\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/init",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"init"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "spin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"session\": \"{{session}}\",\n    \"bet\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/spin",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"spin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "respin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"session\": \"{{session}}\",\n    \"bet\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/respin",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"respin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "close",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"session\": \"{{session}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/close",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"close"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "games",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/games",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"games"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/game/638e8ff290f8248290ca19d6",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"game",
+								"638e8ff290f8248290ca19d6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "players",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/players",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/player/638ecb352de6bd4d2e8fe3ea",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"player",
+								"638ecb352de6bd4d2e8fe3ea"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get player's sessions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/player/638e8ff290f8248290ca19d6/sessions",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"player",
+								"638e8ff290f8248290ca19d6",
+								"sessions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sessions",
+			"item": [
+				{
+					"name": "get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/session/638f407ceae5573f124c2e65",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"session",
+								"638f407ceae5573f124c2e65"
+							],
+							"query": [
+								{
+									"key": "full",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/session/638fde1a644dcdb4f1ce980c",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"session",
+								"638fde1a644dcdb4f1ce980c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

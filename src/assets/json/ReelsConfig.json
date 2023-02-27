@@ -1,0 +1,28 @@
+{
+  "TOTAL_REELS": 6,
+  "SYMBOLS_PER_REEL": 6,
+  "SPEED": 200,
+
+  "WIDTH": 158,
+  "HEIGHT": 158,
+
+  "indexes": {
+    "0": "symbols/ace",
+    "1": "symbols/apple",
+    "2": "symbols/cherry",
+    "3": "symbols/jack",
+    "4": "symbols/king",
+    "5": "symbols/lemon",
+    "6": "symbols/plum",
+    "7": "symbols/queen",
+    "8": "symbols/ten",
+    "9": "symbols/7",
+    "10": "symbols/directMoney"
+  },
+  
+  "STOP_REELS_DELAY": 200, 
+
+  "REGULAR_SPEED": "0.04",
+  "START_EASING": "back.in(4)",
+  "REELS_STOP_ORDER":[0, 1, 2, 3, 4, 5]
+}

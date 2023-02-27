@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "strictNullChecks": false,
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "module": "es2022",
+    "target": "es2017",
+    "resolveJsonModule": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@stateMachine/*": ["./stateMachine/*"],
+      "@types": ["./helpers/types/types.ts"],
+      "@backend/*": ["./backend/*"],
+      "@helpers/*": ["./helpers/*"]
+    },
+    "plugins": [
+      {
+        "name": "typescript-tslint-plugin"
+      }
+    ]
+  },
+  "files": ["src/index.ts"]
+}
+

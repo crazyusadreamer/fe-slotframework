@@ -1,0 +1,66 @@
+{
+  "INITIAL_FONT_SIZE": 160,
+  "FINISH_FONT_SIZE": 200,
+
+  "WIN_ANIMATION_TIME": 0.2,
+  "REGULAR_EASING": "power1.in",
+  "REGULAR_COUNTING_DURATION": 0.4,
+  "DELAY_BEFORE_CLOSE_BIGWIN": 2.5,
+  "REPLACE_FEATURE_SPEED": 0.0,
+  "MIN_FOR_COUNTING": 3,
+  "DELAY_BETWEEN_LINES_WINNINGS": 1.6,
+
+  "BIG_WIN":
+  [
+    {
+      "name":"BIG WIN",
+      "from": 10,
+      "to": 6,
+      "time": 30,
+      "fontScale": 1.2,
+      "fontScaleDuration": 3,
+      "fontScaleEasing": "back.in(4)",
+      "easing": "power1.out"
+    },
+    {
+      "name":"GREAT WIN",
+      "from": 30,
+      "to": 70,
+      "time": 3,
+      "fontScale": 1.4,
+      "fontScaleDuration": 3,
+      "fontScaleEasing": "back.in(4)",
+      "easing": "power1.out"
+    },
+    {
+      "name":"HUGE WIN",
+      "from": 70,
+      "to": 140,
+      "time": 3,
+      "fontScale": 1.6,
+      "fontScaleDuration": 3,
+      "fontScaleEasing": "back.in(4)",
+      "easing": "power1.out"
+    },
+    {
+      "name":"JACKPOT WIN",
+      "from": 140,
+      "to": 300,
+      "time": 3,
+      "fontScale": 1.8,
+      "fontScaleDuration": 3,
+      "fontScaleEasing": "back.in(4)",
+      "easing": "power1.out"
+    },
+    {
+      "name":"MASSIVE WIN",
+      "from": 300,
+      "to": 999999999999,
+      "time": 3,
+      "fontScale": 2.0,
+      "fontScaleDuration": 3,
+      "fontScaleEasing": "back.in(4)",
+      "easing": "power1.out"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "animation": {
+    "15001": "diamond_zero_win",
+    "15002": "seven_win",
+    "15003": "cherries_win",
+    "15004": "orange_win",
+    "15005": "watermelon_win",
+    "15006": "plum_win",
+    "15007": "triple_bar_win",
+    "15008": "double_bar_win",
+    "15009": "single_bar_win"
+  }
+}
